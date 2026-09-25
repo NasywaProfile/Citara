@@ -117,7 +117,9 @@ document.querySelectorAll('.zone-tab').forEach((tab) => {
     window.setTimeout(() => {
       zoneImage.src = zone.image;
       zoneImage.alt = zone.alt;
-      zoneTitle.innerHTML = zone.title.map((word) => `<span>${word}</span>`).join('');
+      const titleText = zone.title.join(' ');
+      zoneTitle.innerHTML = `<span>${titleText}</span>`;
+      zoneTitle.classList.toggle('is-long', titleText.length > 10);
       zoneName.textContent = zone.name;
       zoneKicker.textContent = zone.kicker;
       zoneDescription.textContent = zone.description;
