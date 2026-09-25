@@ -107,28 +107,28 @@ button { color: inherit; }
 .project-stats small { display: block; margin-top: .8vw; font-size: 8px; line-height: 1.3; text-transform: uppercase; }
 
 /* 05 Zones */
-.zones { background: var(--dark-green); color: #fff; }
-.zones-header { display: flex; align-items: flex-end; justify-content: space-between; padding: 5.6vw 5.2vw 3.8vw; }
-.zones-header .section-index { color: var(--acid); opacity: 1; }
-.zones-header > p { max-width: 360px; margin: 0; color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.5; }
+.zones { background: var(--paper); color: var(--ink); }
+.zones-header { display: flex; align-items: flex-end; justify-content: space-between; padding: 6.5vw 5.2vw 4.2vw; }
+.zones-header .section-index { color: var(--dark-green); opacity: 1; }
+.zones-header > p { max-width: 360px; margin: 0; color: rgba(21,21,21,.62); font-size: 13px; line-height: 1.5; }
 .zone-stage { position: relative; height: 56.25vw; min-height: 650px; overflow: hidden; background: #b8dceb; }
-.zone-stage::after { content: ""; position: absolute; z-index: 2; inset: 38% 0 0; background: linear-gradient(180deg, transparent, rgba(10,24,17,.28) 32%, rgba(10,24,17,.94)); pointer-events: none; }
+.zone-stage::after { content: ""; position: absolute; z-index: 2; inset: 42% 0 0; background: linear-gradient(180deg, transparent, rgba(243,243,240,.12) 42%, rgba(243,243,240,.58)); pointer-events: none; }
 .zone-image { transition: opacity .25s ease; }
 .zone-stage.is-changing .zone-image { opacity: .25; }
 .zone-title { position: absolute; z-index: 3; top: -2.6vw; left: 0; width: 100%; padding: 0 1.15vw; margin: 0; overflow: visible; color: var(--acid); font-size: clamp(138px, 19vw, 365px); line-height: .92; letter-spacing: .075em; word-spacing: .3em; white-space: nowrap; pointer-events: none; }
 .zone-title span { display: inline-block; transform: scaleX(var(--zone-title-scale, 1)); transform-origin: left top; }
-.zone-card { position: absolute; z-index: 4; right: 0; bottom: 0; left: 0; display: grid; width: 100%; min-height: 34%; grid-template-columns: .9fr 1fr 1.45fr; grid-template-rows: auto auto; gap: 1.2vw 3vw; align-items: end; padding: 10vw 5.2vw 3.3vw; color: #fff; }
-.zone-card .eyebrow { grid-column: 1; grid-row: 1; margin: 0; color: var(--acid); }
+.zone-card { position: absolute; z-index: 4; right: 0; bottom: 0; left: 0; display: grid; width: 100%; min-height: 32%; grid-template-columns: .9fr 1fr 1.45fr; grid-template-rows: auto auto; gap: 1.2vw 3vw; align-items: end; padding: 7.2vw 5.2vw 3.3vw; clip-path: polygon(0 18%, 17% 18%, 20.5% 0, 100% 0, 100% 100%, 0 100%); background: rgba(243,243,240,.94); color: var(--ink); backdrop-filter: blur(9px); }
+.zone-card .eyebrow { grid-column: 1; grid-row: 1; margin: 0; color: var(--dark-green); }
 .zone-card h3 { grid-column: 1 / 3; grid-row: 2; margin: 0; font-size: clamp(42px, 4.8vw, 92px); line-height: .86; }
-.zone-card > p:not(.eyebrow) { grid-column: 3; grid-row: 1; max-width: 580px; margin: 0; color: rgba(255,255,255,.78); font-size: clamp(10px, .76vw, 14px); line-height: 1.55; }
+.zone-card > p:not(.eyebrow) { grid-column: 3; grid-row: 1; max-width: 580px; margin: 0; color: rgba(21,21,21,.7); font-size: clamp(10px, .76vw, 14px); line-height: 1.55; }
 .zone-card ul { grid-column: 3; grid-row: 2; display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
-.zone-card li { padding: 7px 9px; border: 1px solid rgba(255,255,255,.48); color: #fff; font-size: 7px; letter-spacing: .05em; text-transform: uppercase; }
-.zone-tabs { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); background: var(--dark-green); }
-.zone-tab { position: relative; display: flex; min-height: 88px; align-items: flex-start; gap: 14px; padding: 22px 15px; border: 0; border-right: 1px solid rgba(255,255,255,.14); background: transparent; color: rgba(255,255,255,.48); text-align: left; font-size: 8px; cursor: pointer; }
+.zone-card li { padding: 7px 9px; border: 1px solid rgba(20,36,28,.45); color: var(--dark-green); font-size: 7px; letter-spacing: .05em; text-transform: uppercase; }
+.zone-tabs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.45vw; padding: 2.6vw 4.2vw 4.3vw; background: var(--paper); }
+.zone-tab { position: relative; display: flex; min-height: 92px; align-items: flex-start; gap: 14px; padding: 22px 0; border: 0; border-top: 1px solid rgba(21,21,21,.25); background: transparent; color: rgba(21,21,21,.48); text-align: left; font-size: 8px; cursor: pointer; }
 .zone-tab span { font-size: 11px; font-weight: 600; }
-.zone-tab::after { content: ""; position: absolute; right: 14px; bottom: 0; left: 14px; height: 3px; background: transparent; }
-.zone-tab.active { background: rgba(255,255,255,.045); color: var(--acid); }
-.zone-tab.active::after { background: var(--acid); }
+.zone-tab::after { content: ""; position: absolute; top: -2px; left: 0; width: 0; height: 4px; background: var(--acid); transition: width .25s ease; }
+.zone-tab.active { color: var(--ink); }
+.zone-tab.active::after { width: 100%; }
 
 /* 06 Video */
 .videos { min-height: 100vh; padding-bottom: 7vw; background: var(--dark-green); color: #fff; }
@@ -257,16 +257,16 @@ button { color: inherit; }
   .zones-header { align-items: flex-start; padding: 64px 24px 28px; }
   .zones-header > p { display: none; }
   .zone-stage { height: 760px; min-height: 0; }
-  .zone-stage::after { inset: 24% 0 0; }
+  .zone-stage::after { inset: 35% 0 0; }
   .zone-image { object-position: 58% center; }
   .zone-title { top: 4px; padding: 0 2%; font-size: 22vw; letter-spacing: .065em; word-spacing: .26em; }
-  .zone-card { display: block; width: 100%; min-height: 0; padding: 190px 24px 28px; }
+  .zone-card { display: block; width: 100%; min-height: 0; padding: 132px 24px 28px; clip-path: polygon(0 36px, 56px 36px, 78px 0, 100% 0, 100% 100%, 0 100%); }
   .zone-card .eyebrow { margin-bottom: 12px; }
   .zone-card h3 { margin: 0 0 18px; font-size: 52px; }
   .zone-card > p:not(.eyebrow) { max-width: 520px; margin-bottom: 20px; font-size: 11px; }
   .zone-card ul { margin-top: 0; }
-  .zone-tabs { grid-template-columns: repeat(2, 1fr); }
-  .zone-tab { min-height: 76px; }
+  .zone-tabs { grid-template-columns: repeat(2, 1fr); gap: 0 18px; padding: 26px 18px 42px; }
+  .zone-tab { min-height: 76px; padding: 19px 0; }
   .videos { padding-bottom: 68px; }
   .video-intro { margin: 0 24px 34px; }
   .video-grid { grid-template-columns: 1fr; gap: 14px; padding: 0 20px; }
