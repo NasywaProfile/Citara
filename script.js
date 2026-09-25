@@ -66,7 +66,7 @@ const zones = {
     alt: 'CITARA lifestyle courtyard'
   },
   residential: {
-    title: ['RESI', 'DENTIAL'],
+    title: ['RESIDENTIAL'],
     name: 'Residential',
     kicker: 'A calmer way to live',
     description: 'Hunian dan serviced residence yang hangat, hijau, dan terhubung langsung dengan seluruh pengalaman CITARA.',
@@ -75,7 +75,7 @@ const zones = {
     alt: 'Warm CITARA residential interior'
   },
   mice: {
-    title: ['MICE', 'HOTEL'],
+    title: ['MICE', '&', 'HOSPITALITY'],
     name: 'MICE & Hospitality',
     kicker: 'Meet, stay, and connect',
     description: 'Fasilitas meeting, convention, hotel, dan event yang membawa pengalaman bisnis ke dalam atmosfer sanctuary.',
@@ -84,7 +84,7 @@ const zones = {
     alt: 'CITARA hospitality and event pavilion'
   },
   retail: {
-    title: ['OPEN', 'RETAIL'],
+    title: ['OPEN', 'RETAIL', 'MALL'],
     name: 'Open Retail Mall',
     kicker: 'A market in the landscape',
     description: 'Retail terbuka dengan pilihan kuliner, craft, kebutuhan harian, dan pengalaman belanja yang menyatu dengan taman.',
@@ -101,6 +101,25 @@ const zoneName = document.querySelector('[data-zone-name]');
 const zoneKicker = document.querySelector('[data-zone-kicker]');
 const zoneDescription = document.querySelector('[data-zone-description]');
 const zoneFacilities = document.querySelector('[data-zone-facilities]');
+
+const fitZoneTitle = () => {
+  const titleWord = zoneTitle?.querySelector('span');
+  if (!zoneTitle || !titleWord) return;
+
+  zoneTitle.style.setProperty('--zone-title-scale', '1');
+  const titleStyle = window.getComputedStyle(zoneTitle);
+  const availableWidth = zoneTitle.clientWidth - parseFloat(titleStyle.paddingLeft) - parseFloat(titleStyle.paddingRight);
+  const naturalWidth = titleWord.offsetWidth;
+  if (!naturalWidth) return;
+
+  const scale = Math.max(.45, Math.min(2.4, availableWidth / naturalWidth));
+  zoneTitle.style.setProperty('--zone-title-scale', scale.toFixed(4));
+};
+
+window.requestAnimationFrame(fitZoneTitle);
+document.fonts?.ready.then(fitZoneTitle);
+if (zoneStage && 'ResizeObserver' in window) new ResizeObserver(fitZoneTitle).observe(zoneStage);
+window.addEventListener('resize', fitZoneTitle, { passive: true });
 
 document.querySelectorAll('.zone-tab').forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -119,7 +138,7 @@ document.querySelectorAll('.zone-tab').forEach((tab) => {
       zoneImage.alt = zone.alt;
       const titleText = zone.title.join(' ');
       zoneTitle.innerHTML = `<span>${titleText}</span>`;
-      zoneTitle.classList.toggle('is-long', titleText.length > 10);
+      window.requestAnimationFrame(fitZoneTitle);
       zoneName.textContent = zone.name;
       zoneKicker.textContent = zone.kicker;
       zoneDescription.textContent = zone.description;
