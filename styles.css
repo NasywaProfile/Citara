@@ -169,18 +169,23 @@ a { color: inherit; }
 .plaza > img { object-position: center 52%; }
 .plaza-title {
   position: absolute;
-  z-index: 2;
-  top: -4.6vw;
-  left: -1.1vw;
-  width: 113%;
+  z-index: 5;
+  top: -2.4vw;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 .8%;
   margin: 0;
   color: var(--acid);
-  font-size: clamp(132px, 15.6vw, 300px);
-  line-height: 1;
-  letter-spacing: .278em;
-  white-space: nowrap;
+  font-size: clamp(132px, 14vw, 270px);
+  line-height: .92;
+  letter-spacing: .18em;
   text-transform: uppercase;
+  pointer-events: none;
 }
+.plaza-title span:last-child { margin-right: -.18em; }
 .plaza-card {
   position: absolute;
   z-index: 3;
@@ -305,7 +310,8 @@ a { color: inherit; }
   .display-title { margin-bottom: 60px; font-size: 54px; }
   .about-copy .body-copy { max-width: 100%; }
   .plaza { height: 760px; }
-  .plaza-title { top: 4px; font-size: 27vw; letter-spacing: .14em; }
+  .plaza-title { top: 2px; padding: 0 2%; font-size: 22vw; letter-spacing: .12em; }
+  .plaza-title span:last-child { margin-right: -.12em; }
   .plaza > img { object-position: 58% center; }
   .plaza-card { width: 76%; height: auto; padding: 30px 26px; }
   .plaza-card h3 { margin-bottom: 24px; }
