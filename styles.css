@@ -36,6 +36,7 @@ button { color: inherit; }
 .site-header { position: absolute; z-index: 50; top: 0; left: 0; display: flex; width: 100%; align-items: flex-start; justify-content: space-between; padding: 2.8vw 4.2vw; color: #fff; transition: padding .25s ease, background .25s ease, transform .25s ease; }
 .site-header.scrolled { position: fixed; padding-top: 18px; padding-bottom: 18px; background: rgba(20, 36, 28, .92); backdrop-filter: blur(12px); }
 .brand { display: flex; align-items: center; color: inherit; text-decoration: none; }
+.logo-image { display: block; width: clamp(112px, 10.2vw, 184px); height: auto; object-fit: contain; filter: invert(1); }
 .brand-name { position: relative; font-size: clamp(28px, 3.05vw, 58px); font-weight: 700; letter-spacing: -.1em; line-height: .7; }
 .brand-name::after { content: "•"; position: absolute; top: -.53em; right: -.36em; font-size: .24em; }
 .brand-copy { margin-left: .65vw; font-size: clamp(7px, .56vw, 11px); line-height: .95; }
@@ -212,7 +213,7 @@ button { color: inherit; }
   .section-heading .section-display { text-align: right; }
   .site-header { padding: 24px 22px; }
   .site-header.scrolled { padding: 16px 22px; }
-  .brand-name { font-size: 34px; }
+  .logo-image { width: 126px; }
   .brand-copy { margin-left: 8px; font-size: 8px; }
   .menu { top: 68px; right: 22px; padding: 18px; background: rgba(20,36,28,.9); }
   .hero { min-height: 720px; }
