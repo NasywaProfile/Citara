@@ -151,6 +151,7 @@ document.querySelectorAll('.zone-tab').forEach((tab) => {
 document.querySelectorAll('[data-filter]').forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
+    document.querySelector('.gallery-grid')?.classList.toggle('is-filtered', filter !== 'all');
     document.querySelectorAll('[data-filter]').forEach((item) => item.classList.toggle('active', item === button));
     document.querySelectorAll('.gallery-item').forEach((item) => {
       item.classList.toggle('is-hidden', filter !== 'all' && item.dataset.category !== filter);
