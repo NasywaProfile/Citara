@@ -54,7 +54,7 @@ a { color: inherit; }
   display: flex;
   width: 100%;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 3.1vw 4.4vw;
   color: #fff;
 }
@@ -175,17 +175,19 @@ a { color: inherit; }
   display: flex;
   width: 100%;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2vw;
   padding: 0 .8%;
   margin: 0;
   color: var(--acid);
-  font-size: clamp(132px, 14vw, 270px);
+  font-size: clamp(132px, 23vw, 440px);
   line-height: .92;
-  letter-spacing: .18em;
+  letter-spacing: 0;
   text-transform: uppercase;
   pointer-events: none;
 }
-.plaza-title span:last-child { margin-right: -.18em; }
+.plaza-title span:first-child { transform: scaleX(1.2); transform-origin: left top; }
+.plaza-title span:last-child { margin-right: 0; transform: scaleX(1.2); transform-origin: left top; }
 .plaza-card {
   position: absolute;
   z-index: 3;
@@ -310,8 +312,9 @@ a { color: inherit; }
   .display-title { margin-bottom: 60px; font-size: 54px; }
   .about-copy .body-copy { max-width: 100%; }
   .plaza { height: 760px; }
-  .plaza-title { top: 2px; padding: 0 2%; font-size: 22vw; letter-spacing: .12em; }
-  .plaza-title span:last-child { margin-right: -.12em; }
+  .plaza-title { top: 2px; padding: 0 2%; gap: 5vw; font-size: 24vw; letter-spacing: 0; }
+  .plaza-title span:first-child { transform: scaleX(1); }
+  .plaza-title span:last-child { margin-right: 0; transform: scaleX(1.08); }
   .plaza > img { object-position: 58% center; }
   .plaza-card { width: 76%; height: auto; padding: 30px 26px; }
   .plaza-card h3 { margin-bottom: 24px; }
