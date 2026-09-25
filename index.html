@@ -3,100 +3,230 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Citara Urban Sanctuary — nature, culture, and future in one place." />
-    <title>Citara — Urban Sanctuary</title>
+    <meta name="theme-color" content="#141414" />
+    <meta name="description" content="CITARA is The Urban Sanctuary in Nusantara—where nature, culture, and future are woven into a new way of living." />
+    <meta name="keywords" content="CITARA, urban sanctuary, Nusantara, lifestyle destination, nature, culture, future, hospitality, retail" />
+    <meta property="og:title" content="CITARA — The Urban Sanctuary" />
+    <meta property="og:description" content="Nature, culture, and future woven into a new urban sanctuary in Nusantara." />
+    <meta property="og:image" content="assets/hero-masterplan.png" />
+    <meta property="og:type" content="website" />
+    <title>CITARA — The Urban Sanctuary</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff312'/%3E%3Cpath d='M14 45 32 13l18 32h-9l-9-17-9 17Z' fill='%23151515'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sen:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Citara home">
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="CITARA home">
         <span class="brand-name">citara</span>
         <span class="brand-copy">urban<br />sanctuary</span>
       </a>
-      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu">
         <span></span><span></span><span></span>
       </button>
-      <nav class="menu" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#place">The Plaza</a>
-        <a href="#garden">Garden Roof</a>
-        <a href="#living">Living</a>
+      <nav class="menu" id="main-menu" aria-label="Primary navigation">
+        <a href="#manifesto">Concept</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#overview">Project</a>
+        <a href="#zones">Zones</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="panel hero" id="home" aria-label="Citara aerial masterplan">
-        <img src="assets/hero-masterplan.png" alt="Aerial view of Citara's cultural campus set within a tropical urban forest" />
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img src="assets/hero-masterplan.png" alt="Aerial view of CITARA's cultural campus set within a tropical urban forest" />
         <div class="hero-shade"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow light">KIPP WP 1A · Ibu Kota Nusantara</p>
+          <h1 id="hero-title">The Urban<br />Sanctuary</h1>
+          <p>Nature, culture, and future—woven into a new way of living.</p>
+          <div class="hero-actions">
+            <a class="button button-acid" href="#manifesto">Explore CITARA <span>↘</span></a>
+            <a class="button button-ghost" href="#videos">Watch the vision <span>▶</span></a>
+          </div>
+        </div>
+        <div class="hero-scroll">Scroll to discover <span>↓</span></div>
         <div class="pager" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </section>
 
-      <section class="panel about" id="about">
-        <div class="about-photo image-fill">
+      <section class="manifesto section-frame" id="manifesto" aria-labelledby="manifesto-title">
+        <div class="manifesto-photo image-fill reveal">
           <img src="assets/about-fashion.png" alt="Two women wearing colorful woven dresses beneath a blue sky" />
         </div>
         <div class="woven-seam" aria-hidden="true"></div>
-        <div class="about-copy">
-          <p class="eyebrow">About Us</p>
-          <h1 class="display-title">Nature<br />Culture<br />Future</h1>
-          <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</p>
-        </div>
-      </section>
-
-      <section class="panel plaza" id="place">
-        <img src="assets/the-plaza.png" alt="A landscaped public plaza and amphitheatre beside a contemporary pavilion" />
-        <h2 class="plaza-title" aria-label="The Plaza"><span>THE</span><span>PLAZA</span></h2>
-        <article class="plaza-card">
-          <h3>Lorem ipsum dolor sit<br />amet, consectetur</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam.</p>
+        <article class="manifesto-copy reveal">
+          <p class="section-index">02 / Manifesto</p>
+          <p class="eyebrow">The Weave of Living</p>
+          <h2 class="display-title" id="manifesto-title">Nature<br />Culture<br />Future</h2>
+          <blockquote>“Di CITARA, kota dan alam bukan dua hal yang bertolak belakang.”</blockquote>
+          <p class="body-copy">CITARA merajut ruang hijau, ekspresi budaya, dan kemajuan urban menjadi satu pengalaman hidup. Sebuah sanctuary yang memberi tempat bagi manusia untuk bertumbuh, terhubung, dan membangun masa depan bersama.</p>
         </article>
       </section>
 
-      <section class="panel garden" id="garden">
-        <article class="garden-copy">
-          <div>
-            <p class="eyebrow">The Place</p>
-            <h2 class="section-title">Garden Roof</h2>
-            <p class="body-copy">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</p>
+      <section class="pillars" id="pillars" aria-labelledby="pillars-title">
+        <header class="section-heading reveal">
+          <div><p class="section-index">03 / The DNA</p><p class="eyebrow">Three pillars, one living ecosystem</p></div>
+          <h2 class="section-display" id="pillars-title">The Weave<br />of Living</h2>
+        </header>
+        <div class="pillar-grid">
+          <article class="pillar-card reveal">
+            <img src="assets/garden-roof.png" alt="Terraced tropical garden representing the Nature pillar" />
+            <div class="pillar-overlay"><span>01</span><h3>Nature</h3><p>Ruang hijau berlapis mengembalikan ritme hidup yang lebih tenang, sehat, dan dekat dengan alam.</p></div>
+          </article>
+          <article class="pillar-card reveal">
+            <img src="assets/gallery-weaving.png" alt="Contemporary textile studio representing the Culture pillar" />
+            <div class="pillar-overlay"><span>02</span><h3>Culture</h3><p>Warisan Nusantara hidup melalui seni, tenun, rasa, dan perjumpaan yang relevan dengan generasi hari ini.</p></div>
+          </article>
+          <article class="pillar-card reveal">
+            <img src="assets/facade.png" alt="Contemporary pavilion representing the Future pillar" />
+            <div class="pillar-overlay"><span>03</span><h3>Future</h3><p>Arsitektur adaptif dan pengalaman urban cerdas membuka cara baru untuk tinggal, bekerja, dan berkarya.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="overview" id="overview" aria-labelledby="overview-title">
+        <div class="overview-image image-fill reveal">
+          <img src="assets/hero-masterplan.png" alt="CITARA aerial masterplan" />
+          <span class="image-caption">Illustrative masterplan</span>
+        </div>
+        <article class="overview-copy reveal">
+          <p class="section-index">04 / Project Overview</p>
+          <p class="eyebrow">A new destination for Nusantara</p>
+          <h2 class="section-display" id="overview-title">Built for<br />life to unfold</h2>
+          <p>CITARA menghadirkan tiga komponen utama—Lifestyle Hub, Apartment/Condotel & MICE, serta Open Retail Mall—sebagai destinasi terpadu yang aktif dari pagi hingga malam.</p>
+          <div class="project-stats" aria-label="CITARA project facts">
+            <div><strong>21.731,62</strong><small>m² total area<br />± 2,17 hectares</small></div>
+            <div><strong>3</strong><small>main project<br />components</small></div>
+            <div><strong>35,02%</strong><small>green<br />area</small></div>
+            <div><strong>2027</strong><small>target<br />opening</small></div>
           </div>
         </article>
-        <div class="garden-photo image-fill">
-          <img src="assets/garden-roof.png" alt="A woman walking through a serene terraced stone garden" />
+      </section>
+
+      <section class="zones" id="zones" aria-labelledby="zones-heading">
+        <header class="zones-header reveal">
+          <div><p class="section-index">05 / Zones & Facilities</p><p class="eyebrow">Six places, one connected destination</p></div>
+          <p>Choose a zone to explore its character and key facilities.</p>
+        </header>
+        <div class="zone-stage" data-zone-stage>
+          <img class="zone-image" src="assets/the-plaza.png" alt="The Plaza at CITARA" data-zone-image />
+          <h2 class="zone-title" id="zones-heading" data-zone-title><span>THE</span><span>PLAZA</span></h2>
+          <article class="zone-card" aria-live="polite">
+            <p class="eyebrow" data-zone-kicker>Public heart of CITARA</p>
+            <h3 data-zone-name>The Plaza</h3>
+            <p data-zone-description>Ruang publik utama yang mempertemukan aktivitas retail, kuliner, pertunjukan, dan komunitas dalam satu plaza tropis yang terbuka.</p>
+            <ul data-zone-facilities><li>Amphitheater</li><li>Community events</li><li>Retail promenade</li></ul>
+          </article>
+        </div>
+        <div class="zone-tabs" role="tablist" aria-label="CITARA zones">
+          <button class="zone-tab active" type="button" role="tab" aria-selected="true" data-zone="plaza">01 <span>The Plaza</span></button>
+          <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="garden">02 <span>Garden Roof</span></button>
+          <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="lifestyle">03 <span>Lifestyle Hub</span></button>
+          <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="residential">04 <span>Residential</span></button>
+          <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="mice">05 <span>MICE & Hospitality</span></button>
+          <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone="retail">06 <span>Open Retail Mall</span></button>
         </div>
       </section>
 
-      <section class="panel living" id="living">
-        <div class="living-photo image-fill">
-          <img src="assets/living-room.png" alt="Friends gathered in a warm contemporary tropical living room" />
+      <section class="videos" id="videos" aria-labelledby="videos-title">
+        <header class="section-heading light-heading reveal">
+          <div><p class="section-index">06 / Film</p><p class="eyebrow">See CITARA in motion</p></div>
+          <h2 class="section-display" id="videos-title">Experience<br />CITARA</h2>
+        </header>
+        <p class="video-intro reveal">Dua film akan membawa Anda lebih dekat pada visi project dan atmosfer hospitality CITARA. Poster berikut merupakan visual dummy hingga video resmi diproduksi.</p>
+        <div class="video-grid">
+          <button class="video-card reveal" type="button" data-video-placeholder="Project Profile CITARA — 2–3 minutes">
+            <img src="assets/video-project-profile.png" alt="Twilight aerial poster for the CITARA project profile video" />
+            <span class="video-badge">Video 01 · In production</span><span class="play">▶</span><strong>Project Profile<br />CITARA</strong>
+          </button>
+          <button class="video-card reveal" type="button" data-video-placeholder="Tourism & Hospitality Film — 1–1.5 minutes">
+            <img src="assets/video-lifestyle.png" alt="Golden-hour lifestyle poster for the CITARA hospitality film" />
+            <span class="video-badge">Video 02 · In production</span><span class="play">▶</span><strong>Life at the<br />Urban Sanctuary</strong>
+          </button>
         </div>
-        <article class="living-copy">
-          <p class="eyebrow">Living a New Life</p>
-          <p class="lead-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate.</p>
-          <div class="stats">
-            <div><strong>10<span>+</span></strong><small>Lorem ipsum dolor sit amet,<br />consectetuer adipiscing elit.</small></div>
-            <div><strong>90<span>+</span></strong><small>Lorem ipsum dolor sit amet,<br />consectetuer adipiscing elit.</small></div>
-            <div><strong>40<span>+</span></strong><small>Lorem ipsum dolor sit amet,<br />consectetuer adipiscing elit.</small></div>
+        <p class="video-notice" data-video-notice aria-live="polite"></p>
+      </section>
+
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <header class="gallery-header reveal">
+          <div><p class="section-index">07 / Visual CITARA</p><h2 class="section-display" id="gallery-title">The world<br />of CITARA</h2></div>
+          <div class="gallery-filters" aria-label="Filter gallery">
+            <button class="active" type="button" data-filter="all">All</button><button type="button" data-filter="nature">Nature</button><button type="button" data-filter="culture">Culture</button><button type="button" data-filter="lifestyle">Lifestyle</button><button type="button" data-filter="hospitality">Hospitality</button><button type="button" data-filter="render">Render</button>
           </div>
-        </article>
-        <div class="diamonds diamonds-left" aria-hidden="true"></div>
+        </header>
+        <div class="gallery-grid">
+          <figure class="gallery-item wide reveal" data-category="render"><img src="assets/facade.png" alt="Front elevation of CITARA pavilion" /><figcaption>Render / CITARA Centre</figcaption></figure>
+          <figure class="gallery-item tall reveal" data-category="nature"><img src="assets/garden-roof.png" alt="Terraced garden landscape" /><figcaption>Nature / Garden Roof</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="culture"><img src="assets/gallery-weaving.png" alt="Textile artists in a woven craft studio" /><figcaption>Culture / Living Heritage</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="lifestyle"><img src="assets/about-fashion.png" alt="Contemporary woven fashion portrait" /><figcaption>Lifestyle / New Expression</figcaption></figure>
+          <figure class="gallery-item wide reveal" data-category="hospitality"><img src="assets/living-room.png" alt="Warm contemporary living room" /><figcaption>Hospitality / Living Room</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="lifestyle"><img src="assets/video-lifestyle.png" alt="Friends walking beside a reflective pool" /><figcaption>Lifestyle / Golden Hour</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="hospitality"><img src="assets/gallery-fnb.png" alt="Communal Indonesian dining experience" /><figcaption>F&amp;B / Shared Table</figcaption></figure>
+          <figure class="gallery-item wide reveal" data-category="render"><img src="assets/the-plaza.png" alt="The Plaza at CITARA" /><figcaption>Render / The Plaza</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="nature"><img src="assets/hero-masterplan.png" alt="Aerial masterplan surrounded by forest" /><figcaption>Nature / Urban Forest</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="render"><img src="assets/video-project-profile.png" alt="CITARA at blue hour" /><figcaption>Render / Blue Hour</figcaption></figure>
+        </div>
       </section>
 
-      <section class="panel finale">
-        <div class="diamond-run diamond-run-a" aria-hidden="true"></div>
-        <div class="diamond-run diamond-run-b" aria-hidden="true"></div>
-        <figure class="finale-image">
-          <img src="assets/facade.png" alt="Citara's glass cultural pavilion with red stair and inhabited green roof" />
-          <figcaption>Citara Centre</figcaption>
-        </figure>
-        <article class="finale-copy">
-          <h2>Lorem ipsum dolor sit<br />amet, consectetur</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
-        </article>
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <div class="proof-intro reveal">
+          <p class="section-index">08 / Social Proof</p>
+          <p class="eyebrow">A vision built through collaboration</p>
+          <h2 class="section-display" id="proof-title">A destination<br />with purpose</h2>
+          <p>Media coverage, partner statements, and project recognitions will be added as they are confirmed. These concept statements show the intended content structure.</p>
+        </div>
+        <div class="quote-grid">
+          <blockquote class="reveal"><span>“</span><p>A new urban destination where landscape, culture, and everyday life can grow together.</p><cite>Project vision · CITARA</cite></blockquote>
+          <blockquote class="reveal"><span>“</span><p>Designed as an open ecosystem—welcoming communities, creators, businesses, and future residents.</p><cite>Development statement · CITARA</cite></blockquote>
+        </div>
+        <div class="partner-row reveal" aria-label="Partner logo placeholders"><span>DESIGN PARTNER</span><span>LANDSCAPE</span><span>HOSPITALITY</span><span>COMMUNITY</span></div>
+      </section>
+
+      <section class="instagram" id="instagram" aria-labelledby="instagram-title">
+        <header class="instagram-header reveal">
+          <div><p class="section-index">09 / Follow the journey</p><h2 class="section-display" id="instagram-title">@citara.living</h2></div>
+          <a class="text-link" href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer">View all on Instagram ↗</a>
+        </header>
+        <div class="instagram-grid">
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/gallery-weaving.png" alt="Colorful woven textiles" /><span>Culture in every thread</span></a>
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/garden-roof.png" alt="Garden roof" /><span>Green from the ground up</span></a>
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/gallery-fnb.png" alt="Shared dining table" /><span>A table made to gather</span></a>
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/facade.png" alt="CITARA facade" /><span>A new civic landmark</span></a>
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/about-fashion.png" alt="Modern woven fashion" /><span>Living heritage, new expression</span></a>
+          <a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer"><img src="assets/video-lifestyle.png" alt="Lifestyle courtyard" /><span>Life in the sanctuary</span></a>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy reveal">
+          <p class="section-index">10 / Contact</p>
+          <p class="eyebrow">Begin a conversation</p>
+          <h2 class="section-display" id="contact-title">Find your<br />place here.</h2>
+          <p>Whether you are exploring a residence, a retail opportunity, an event, or a long-term partnership, our team is ready to continue the conversation.</p>
+          <div class="contact-details"><a href="mailto:hello@citara.com">hello@citara.com</a><a href="mailto:leasing@citara.com">leasing@citara.com</a><span>KIPP WP 1A, Ibu Kota Nusantara</span></div>
+        </div>
+        <form class="contact-form reveal" data-contact-form>
+          <label>Full name<input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
+          <div class="form-row"><label>WhatsApp number<input type="tel" name="whatsapp" autocomplete="tel" required placeholder="+62" /></label><label>Email<input type="email" name="email" autocomplete="email" placeholder="name@email.com" /></label></div>
+          <label>Area of interest<select name="interest"><option>The Plaza</option><option>Garden Roof</option><option>Lifestyle Hub</option><option>Residential</option><option>MICE & Hospitality</option><option>Open Retail Mall</option><option>Partnership</option></select></label>
+          <label>Message<textarea name="message" rows="4" placeholder="Tell us what you are looking for"></textarea></label>
+          <button class="button button-dark" type="submit">Send enquiry <span>↗</span></button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><a class="brand" href="#home"><span class="brand-name">citara</span><span class="brand-copy">urban<br />sanctuary</span></a><p>Nature. Culture. Future.</p></div>
+      <div class="footer-nav"><p>Explore</p><a href="#manifesto">Concept</a><a href="#pillars">Pillars</a><a href="#zones">Zones</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+      <div class="footer-nav"><p>Connect</p><a href="https://www.instagram.com/citara.living/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="#videos">YouTube · coming soon</a><a href="#contact">TikTok · coming soon</a><a href="https://goo.gl/maps/be8cCphrK5TTDfgs8?g_st=aw" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
+      <div class="footer-contact"><p>Inquiries</p><a href="mailto:hello@citara.com">hello@citara.com</a><a href="mailto:leasing@citara.com">leasing@citara.com</a><a href="mailto:partnership@citara.com">partnership@citara.com</a></div>
+      <div class="footer-bottom"><span>© 2026 PT Citadel Group Indonesia</span><span>Privacy Policy · Terms & Conditions</span><a href="#home">Back to top ↑</a></div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
