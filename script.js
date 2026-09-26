@@ -23,6 +23,64 @@ menu?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const hero = document.querySelector('.hero');
+const heroSlides = [...document.querySelectorAll('.hero-slide')];
+const heroDots = [...document.querySelectorAll('.pager button')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let heroIndex = 0;
+let heroTimer;
+let touchStartX = 0;
+let pointerStartX = 0;
+
+const showHeroSlide = (index) => {
+  heroIndex = (index + heroSlides.length) % heroSlides.length;
+  heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === heroIndex));
+  heroDots.forEach((dot, i) => {
+    const active = i === heroIndex;
+    dot.classList.toggle('active', active);
+    dot.setAttribute('aria-selected', String(active));
+  });
+};
+
+const stopHeroAutoplay = () => window.clearInterval(heroTimer);
+const startHeroAutoplay = () => {
+  stopHeroAutoplay();
+  if (reduceMotion.matches || document.hidden) return;
+  heroTimer = window.setInterval(() => showHeroSlide(heroIndex + 1), 6000);
+};
+
+const changeHeroSlide = (offset) => {
+  showHeroSlide(heroIndex + offset);
+  startHeroAutoplay();
+};
+
+if (hero && heroSlides.length > 1) {
+  hero.querySelector('.hero-arrow-prev')?.addEventListener('click', () => changeHeroSlide(-1));
+  hero.querySelector('.hero-arrow-next')?.addEventListener('click', () => changeHeroSlide(1));
+  heroDots.forEach((dot, index) => dot.addEventListener('click', () => {
+    showHeroSlide(index);
+    startHeroAutoplay();
+  }));
+  hero.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].screenX; }, { passive: true });
+  hero.addEventListener('touchend', (event) => {
+    const delta = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(delta) > 45) changeHeroSlide(delta < 0 ? 1 : -1);
+  }, { passive: true });
+  hero.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'mouse' || event.target.closest('button, a')) return;
+    pointerStartX = event.clientX;
+    hero.setPointerCapture(event.pointerId);
+  });
+  hero.addEventListener('pointerup', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    const delta = event.clientX - pointerStartX;
+    if (Math.abs(delta) > 60) changeHeroSlide(delta < 0 ? 1 : -1);
+  });
+  document.addEventListener('visibilitychange', startHeroAutoplay);
+  reduceMotion.addEventListener('change', startHeroAutoplay);
+  startHeroAutoplay();
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
